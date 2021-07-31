@@ -20,7 +20,7 @@ namespace Company.Function
 
 
         [FunctionName("GetReadingFromThermostat")]
-        public static void Run([TimerTrigger("0 */1 * * * *")] TimerInfo myTimer, ILogger log)
+        public static void Run([TimerTrigger("0 */3 * * * *")] TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"HoneywellT6ThermostatGetData Timer trigger function executed at: {DateTime.Now}.");
 
