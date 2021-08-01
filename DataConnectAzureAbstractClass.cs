@@ -19,6 +19,9 @@ namespace Company.Function
 {
     public abstract class DataConnectAzureAbstractClass
     {
-       //public static string testString;
+       //public static string tempString;
+
+        //Most of the data table connecting logic is in GetReadingFromThermostat class
+        //if expanding functionality to other classes, will do so here.
     }
 }

@@ -19,14 +19,10 @@ namespace Company.Function
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            string name = req.Query["name"];
-
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
+            //I'm holding EnableThermostatQuery value in memory, since the function application
+            //will always be loaded, I think this is the smartest way, but test it.
 
             string responseMessage = "{\"LoggingStatus\":\"status\"}";
-
             responseMessage = responseMessage.Replace("status", GetReadingFromThermostat.EnableThermostatQuery.ToString());
             
             return new OkObjectResult(responseMessage);

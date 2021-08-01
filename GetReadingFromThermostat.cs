@@ -15,9 +15,9 @@ namespace Company.Function
 {
     public class GetReadingFromThermostat : DataConnectAzureAbstractClass
     {
-        //this value is held in memory, not in database
+        //I'm holding EnableThermostatQuery value in memory, since the function application
+        //will always be loaded, I think this is the smartest way, but test it.
         public static bool EnableThermostatQuery = true;
-
 
         [FunctionName("GetReadingFromThermostat")]
         public static void Run([TimerTrigger("0 */3 * * * *")] TimerInfo myTimer, ILogger log)

@@ -19,6 +19,9 @@ namespace Company.Function
         {
             log.LogInformation("EnableDisableThermostatQuery processed a request.");
 
+            //I'm holding EnableThermostatQuery value in memory, since the function application
+            //will always be loaded, I think this is the smartest way, but test it.
+
             if (changeToStatus == "0") { GetReadingFromThermostat.EnableThermostatQuery = false; }
             if (changeToStatus == "1") { GetReadingFromThermostat.EnableThermostatQuery = true; }
 

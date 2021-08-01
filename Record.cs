@@ -16,12 +16,10 @@ namespace Company.Function
         }
 
         public RecordEntity() { }
-
         public string indoorTemperature { get; set; }
         public string outdoorTemperature { get; set; }
         public string mode { get; set; }
         public string fanRequest { get; set; }
         public string circulationFanRequest { get; set; }
-
     }
 }
